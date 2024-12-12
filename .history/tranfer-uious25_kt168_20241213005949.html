@@ -47,7 +47,7 @@
             <select id="account"
                 class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
                 <option value="" disabled selected>กรุณาเลือกบัญชี</option>
-                <option value="1">บัญชี 1 (0620464854)</option>
+                <option value="1">บัญชี 1 (0942648028)</option>
             </select>
         </div>
 
@@ -114,11 +114,11 @@
     <script>
         const accounts = {
             '1': {
-                tmn_key_id: 'x437b07507f',
-                mobile_number: '0620464854',
-                login_token: 'L-4fc738b8-2507-4ad4-9fa8-e2383da44c46',
-                pin: '310544',
-                tmn_id: 'tmn.10132608951'
+                tmn_key_id: 'x437b085978',
+                mobile_number: '0942648028',
+                login_token: 'L-62d6f284-e86d-4f7b-bc54-8bfd026bd8be',
+                pin: '249999',
+                tmn_id: 'tmn.10134398162'
             }
         };
 
@@ -135,7 +135,7 @@
         });
         async function fetchAPI(action, data) {
             try {
-                const response = await fetch('process_transfer_bb.php', {
+                const response = await fetch('process_transfer_wy.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',
