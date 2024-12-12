@@ -38,7 +38,7 @@ function sendLineNotifyLog($message) {
 
 function sendLineNotify($message)
 {
-    $token = "l9HOFk9ZiuqSpWSms5JTkxNnlXalJBTrnhbXSzMJPuZ"; // ใส่ Token ที่สร้างไว้
+    $token = "JuDUbvy2mhgExwW7SypUh7e1KettXwNgXGKuyJabLtN"; // ใส่ Token ที่สร้างไว้
     $data = array(
         'message' => $message
     );
