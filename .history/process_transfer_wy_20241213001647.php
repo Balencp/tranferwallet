@@ -1,5 +1,5 @@
 <?php
-require_once 'TMNOnehb.php';
+require_once 'TMNOnewy.php';
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
@@ -14,7 +14,7 @@ ini_set('display_errors', 1);
 date_default_timezone_set('Asia/Bangkok');
 function sendLineNotifyLog($message) {
     $url = "https://notify-api.line.me/api/notify";
-    $token = 'kq28KEt0ZGrwCG9SL7cRdq8upOR5aWPLHkkrJg7niAf'; // แทนที่ด้วย token ของคุณ
+    $token = 'JuDUbvy2mhgExwW7SypUh7e1KettXwNgXGKuyJabLtN'; // แทนที่ด้วย token ของคุณ
     $headers = [
         'Content-Type: application/x-www-form-urlencoded',
         'Authorization: Bearer ' . $token
@@ -142,7 +142,7 @@ function process_action($action, $data) {
                 
                 $conn = get_connection();
                 $date_time = date('Y-m-d H:i:s');
-                $message = "การโอนเงินสำเร็จ!\nเบอร์โทรศัพท์: {$data['payee_wallet_id']}\nจำนวนเงิน: {$data['amount']} บาท\nพนักงาน: {$employee['employee_name']}\nเวลา: {$date_time}";
+                $message = "การโอนเงินสำเร็จ!\nเว็บ WY SLOT WALLET\nเบอร์โทรศัพท์: {$data['payee_wallet_id']}\nจำนวนเงิน: {$data['amount']} บาท\nพนักงาน: {$employee['employee_name']}\nเวลา: {$date_time}";
                 sendLineNotify($message);
                 // Insert into tranferlog_bl_ptop
                 $stmt = $conn->prepare("INSERT INTO tranferlog_back_ptop (amount, date_time, bankAccountNo) VALUES (:amount, :date_time, :bank_account_no)");

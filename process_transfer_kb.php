@@ -1,5 +1,5 @@
 <?php
-require_once 'TMNOnehb.php';
+require_once 'TMNOnekb.php';
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
@@ -14,7 +14,7 @@ ini_set('display_errors', 1);
 date_default_timezone_set('Asia/Bangkok');
 function sendLineNotifyLog($message) {
     $url = "https://notify-api.line.me/api/notify";
-    $token = 'kq28KEt0ZGrwCG9SL7cRdq8upOR5aWPLHkkrJg7niAf'; // แทนที่ด้วย token ของคุณ
+    $token = 'JuDUbvy2mhgExwW7SypUh7e1KettXwNgXGKuyJabLtN'; // แทนที่ด้วย token ของคุณ
     $headers = [
         'Content-Type: application/x-www-form-urlencoded',
         'Authorization: Bearer ' . $token
@@ -38,7 +38,7 @@ function sendLineNotifyLog($message) {
 
 function sendLineNotify($message)
 {
-    $token = "l9HOFk9ZiuqSpWSms5JTkxNnlXalJBTrnhbXSzMJPuZ"; // ใส่ Token ที่สร้างไว้
+    $token = "thomGIwTu4orfnGY1zFtavSqxuzoZZZSKpbNaPc0RcR"; // ใส่ Token ที่สร้างไว้
     $data = array(
         'message' => $message
     );
